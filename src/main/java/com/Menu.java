@@ -18,7 +18,6 @@ public class Menu {
                     .toString();
             System.out.println(builder);
             triggerMenu(ReadDataFromUser.readNumberFromUser());
-
         }
     }
 

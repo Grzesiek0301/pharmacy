@@ -21,8 +21,19 @@ public class DataBaseCommands {
         }
     }
 
-    public static void removeMedicineFromDataBase() {
-
+    public static void removeMedicineFromDataBase(String medicineName) {
+        {
+            try {
+                Connection connection = DataBaseConnector.connection();
+                PreparedStatement preparedStatement =
+                        connection.prepareStatement(" DELETE FROM  ListOfMedicines WHERE MedicineName = ?");
+                preparedStatement.setString(1, medicineName);
+                preparedStatement.executeUpdate();
+                System.out.println("Removed record");
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 }
 

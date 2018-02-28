@@ -14,4 +14,9 @@ public class ReadDataFromUser {
         return scanner.nextLine();
 
     }
+
+    public static double readDoubleFromUser() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextDouble();
+    }
 }
