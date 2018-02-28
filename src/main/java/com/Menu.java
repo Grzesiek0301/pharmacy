@@ -1,3 +1,10 @@
+package com;
+
+import com.ReadDataFromUser;
+
+import static com.Commands.removeMedicineFromDataBase;
+import static com.Commands.addMedicineToDataBase;
+
 public class Menu {
 
     public void displayMenu() {
@@ -11,7 +18,6 @@ public class Menu {
                     .toString();
             System.out.println(builder);
             triggerMenu(ReadDataFromUser.readNumberFromUser());
-
         }
     }
 
@@ -19,10 +25,10 @@ public class Menu {
 
         switch (number) {
             case 1:
-                System.out.println("number1");
+                addMedicineToDataBase();
                 break;
             case 2:
-                System.out.println("number2");
+                removeMedicineFromDataBase();
                 break;
             case 3:
                 System.out.println("number3");
