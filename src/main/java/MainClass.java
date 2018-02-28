@@ -1,7 +1,9 @@
 public class MainClass {
     public static void main(String[] args) {
 
-        DataBaseConnector.save();
+        Medicine apap = new Medicine("Apap", 20);
+
+        DataBaseCommands.sendNewMedicineToDataBase(apap);
 
     }
 }
