@@ -11,7 +11,7 @@ public class DataBaseConnector {
             String DBURL = "jdbc:mysql://localhost:3306/Pharmacy";
             String DBUSER = "root";
             String DBPASS = "";
-            String DBDRIVER = "com.mysql.jdbc.Driver";
+            String DBDRIVER = "com.mysql.cj.jdbc.Driver";
             Class.forName(DBDRIVER);
             Connection connection = DriverManager.getConnection(DBURL, DBUSER, DBPASS);
             return connection;

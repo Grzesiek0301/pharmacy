@@ -22,6 +22,14 @@ public class Commands {
         DataBaseCommands.removeMedicineFromDataBase(medicineName);
     }
 
+    public static void changeMedicinePrice() {
+        displayMessage("Which medicine do you want to change price? Enter name:\n");
+        String name = readStringFromUser();
+        displayMessage("Enter new price: \n");
+        double newPrice = readDoubleFromUser();
+        DataBaseCommands.changeMedicinePrice(name, newPrice);
+    }
+
     private static void displayMessage(String message) {
         System.out.println(message);
     }
